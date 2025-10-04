@@ -25,9 +25,14 @@ export default defineConfig({
       component: './Access',
     },
     {
-      name: ' CRUD 示例',
+      name: 'CRUD 示例',
       path: '/table',
       component: './Table',
+    },
+    {
+      name: '无限滚动示例',
+      path: '/infiniteScroll',
+      component: './InfiniteScroll',
     },
   ],
   npmClient: 'pnpm',
