@@ -14,7 +14,11 @@
     "@ant-design/icons": "^5.0.1",
     "@ant-design/pro-components": "^2.4.4",
     "@umijs/max": "^4.4.11",
-    "antd": "^5.4.0"
+    "antd": "^5.4.0",
+    "dat.gui": "^0.7.9",
+    "echarts": "^6.0.0",
+    "tailwindcss": "^4.1.14",
+    "three": "^0.180.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.33",
