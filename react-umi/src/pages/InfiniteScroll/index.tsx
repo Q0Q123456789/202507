@@ -67,7 +67,7 @@ const InfiniteScroll: React.FC = () => {
     <div
       ref={containerRef}
       style={{
-        height: '80vh',
+        height: '90vh',
         overflowY: 'auto',
         padding: 16,
         background: '#f5f5f5',
