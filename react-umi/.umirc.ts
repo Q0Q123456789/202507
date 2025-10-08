@@ -35,7 +35,6 @@ export default defineConfig({
       component: "./InfiniteScroll",
     },
   ],
-
   npmClient: "pnpm",
-  // tailwindcss: {},
+  tailwindcss: {},
 });
