@@ -1,0 +1,42 @@
+{
+  "compilerOptions": {
+    // 编译器选项
+    "target": "ES2020", // 编译目标版本
+    "module": "ESNext", // 模块系统
+    "lib": [
+      "DOM",
+      "DOM.Iterable",
+      "ESNext"
+    ], // 使用的库文件
+    "jsx": "react-jsx", // JSX 处理方式（React 17+）
+    "resolveJsonModule": true, // 允许导入 JSON
+    "allowSyntheticDefaultImports": true, // 允许默认导入
+    "allowImportingTsExtensions": true,
+    "moduleResolution": "node", // 模块解析策略
+    "baseUrl": "./", // 基础路径
+    "paths": {
+      // 路径映射
+      "@/*": [
+        "src/*"
+      ],
+      "@components/*": [
+        "src/components/*"
+      ]
+    }
+  },
+  "include": [
+    // 要包含的文件
+    "src/**/*",
+    "types/**/*"
+  ],
+  "exclude": [
+    // 要排除的文件
+    "node_modules",
+    "dist",
+    "**/*.test.ts",
+    "**/*.spec.ts"
+  ],
+  "references": [
+    // 项目引用（用于 monorepo）
+  ]
+}

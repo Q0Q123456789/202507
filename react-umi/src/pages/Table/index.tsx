@@ -1,4 +1,4 @@
-import services from '@/services/demo'
+import services from '@/services/demo/index.ts'
 import {
 	ActionType,
 	FooterToolbar,
@@ -20,6 +20,7 @@ const { addUser, queryUserList, deleteUser, modifyUser } =
  * @param fields
  */
 const handleAdd = async (fields: API.UserInfo) => {
+	console.log('fields',fields)
 	const hide = message.loading('正在添加')
 	try {
 		await addUser({ ...fields })
@@ -132,7 +133,7 @@ const TableList: React.FC<unknown> = () => {
 					>
 						配置
 					</a>
-					<Divider type="vertical" />
+					<Divider orientation="vertical" />
 					<a href="">订阅警报</a>
 				</>
 			)
@@ -242,7 +243,7 @@ const TableList: React.FC<unknown> = () => {
 			) : null}
 
 			<Drawer
-				width={600}
+				size={600}
 				open={!!row}
 				onClose={() => {
 					setRow(undefined)
