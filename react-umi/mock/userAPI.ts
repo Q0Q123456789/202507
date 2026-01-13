@@ -16,5 +16,16 @@ export default {
 			success: true,
 			errorCode: 0
 		})
+	},
+	'POST /api/v1/user/': (req: any, res: any) => {
+		users.push({
+			id: users.length + 1,
+			...req.body,
+			gender: ''
+		})
+		res.json({
+			success: true,
+			errorCode: 0
+		})
 	}
 }

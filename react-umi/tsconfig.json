@@ -21,13 +21,15 @@
       ],
       "@components/*": [
         "src/components/*"
-      ]
+      ],
+      "@@/*": ["./src/.umi/*"]
     }
   },
   "include": [
     // 要包含的文件
     "src/**/*",
-    "types/**/*"
+    "types/**/*",
+    "typings.d.ts"
   ],
   "exclude": [
     // 要排除的文件

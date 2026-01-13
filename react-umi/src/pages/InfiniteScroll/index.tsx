@@ -1,5 +1,5 @@
+import PageContainer from '@/components/Container/index.tsx'
 import React, { useEffect, useRef, useState } from 'react'
-
 interface Card {
 	id: number
 	title: string
@@ -27,7 +27,7 @@ const InfiniteScroll: React.FC = () => {
 	const [hasMore, setHasMore] = useState(true)
 	const containerRef = useRef<HTMLDivElement>(null)
 
-	const PAGE_SIZE = 50
+	const PAGE_SIZE = 150
 
 	useEffect(() => {
 		const loadCards = async () => {
@@ -65,39 +65,39 @@ const InfiniteScroll: React.FC = () => {
 	}, [loading, hasMore])
 
 	return (
-		<div
-			ref={containerRef}
-			style={{
-				height: '90vh',
-				overflowY: 'auto',
-				padding: 16,
-				background: '#f5f5f5'
-			}}
-		>
-			<div style={{ display: 'flex', flexWrap: 'wrap', gap: 16 }}>
-				{cards.map((card) => (
-					<div
-						key={card.id}
-						style={{
-							background: '#fff',
-							borderRadius: 8,
-							boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
-							padding: 16,
-							width: '220px'
-						}}
-					>
-						<h3>{card.title}</h3>
-						<p>{card.description}</p>
-					</div>
-				))}
+		<PageContainer>
+			<div
+				ref={containerRef}
+				style={{
+					height: '90vh',
+					overflowY: 'auto'
+				}}
+			>
+				<div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
+					{cards.map((card) => (
+						<div
+							key={card.id}
+							style={{
+								background: '#fff',
+								borderRadius: 8,
+								boxShadow: '2px 2px 8px rgba(0,0,0,0.1)',
+								padding: 16,
+								width: '220px'
+							}}
+						>
+							<h3>{card.title}</h3>
+							<p>{card.description}</p>
+						</div>
+					))}
+				</div>
+				{loading && (
+					<div style={{ textAlign: 'center', margin: 16 }}>加载中...</div>
+				)}
+				{!hasMore && (
+					<div style={{ textAlign: 'center', margin: 16 }}>没有更多了</div>
+				)}
 			</div>
-			{loading && (
-				<div style={{ textAlign: 'center', margin: 16 }}>加载中...</div>
-			)}
-			{!hasMore && (
-				<div style={{ textAlign: 'center', margin: 16 }}>没有更多了</div>
-			)}
-		</div>
+		</PageContainer>
 	)
 }
 

@@ -1,8 +1,8 @@
+import PageContainer from '@/components/Container/index.tsx'
 import services from '@/services/demo/index.ts'
 import {
 	ActionType,
 	FooterToolbar,
-	PageContainer,
 	ProDescriptions,
 	ProDescriptionsItemProps,
 	ProTable
@@ -20,7 +20,7 @@ const { addUser, queryUserList, deleteUser, modifyUser } =
  * @param fields
  */
 const handleAdd = async (fields: API.UserInfo) => {
-	console.log('fields',fields)
+	console.log('fields', fields)
 	const hide = message.loading('正在添加')
 	try {
 		await addUser({ ...fields })
@@ -141,11 +141,7 @@ const TableList: React.FC<unknown> = () => {
 	]
 
 	return (
-		<PageContainer
-			header={{
-				title: 'CRUD 示例'
-			}}
-		>
+		<PageContainer>
 			<ProTable<API.UserInfo>
 				headerTitle="查询表格"
 				actionRef={actionRef}

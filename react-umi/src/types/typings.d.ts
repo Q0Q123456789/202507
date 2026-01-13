@@ -64,5 +64,10 @@ declare namespace API {
 		email?: string
 	}
 
+	interface Result_Login_ {
+		username?: string
+		password?: string
+	}
+
 	type definitions_0 = null
 }
