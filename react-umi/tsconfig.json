@@ -11,6 +11,7 @@
     "jsx": "react-jsx", // JSX 处理方式（React 17+）
     "resolveJsonModule": true, // 允许导入 JSON
     "allowSyntheticDefaultImports": true, // 允许默认导入
+    "noEmit": true,
     "allowImportingTsExtensions": true,
     "moduleResolution": "node", // 模块解析策略
     "baseUrl": "./", // 基础路径
