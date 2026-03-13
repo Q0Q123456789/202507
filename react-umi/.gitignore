@@ -12,3 +12,5 @@
 /.mfsu
 .swc
 *-lock.*
+*.lock
+.idea
