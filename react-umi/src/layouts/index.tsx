@@ -19,7 +19,6 @@ import style from './index.less'
  * 由于 tailwindcss 的样式比较大, 这里没有直接引入, 而是通过 postcss 的方式引入, 具体配置可以参考 postcss.config.js
  * 当然也可以直接在这里引入其他 css 框架的样式, 例如 antd 的样式, 只需要安装 antd 并引入即可
  */
-import './style/main.css'
 
 const { Header, Content, Sider } = Layout
 
