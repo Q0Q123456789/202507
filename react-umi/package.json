@@ -11,29 +11,29 @@
     "start": "npm run dev"
   },
   "dependencies": {
-    "@ant-design/icons": "^6.1.0",
+    "@ant-design/icons": "^6.2.2",
     "@ant-design/pro-components": "^2.8.10",
-    "@umijs/max": "^4.6.28",
-    "@unocss/cli": "^66.6.0",
-    "ahooks": "^3.9.6",
-    "antd": "^6.3.0",
+    "@umijs/max": "^4.6.51",
+    "@unocss/cli": "^66.6.8",
+    "ahooks": "^3.9.7",
+    "antd": "^6.3.7",
     "classnames": "^2.5.1",
     "dat.gui": "^0.7.9",
     "echarts": "^6.0.0",
-    "tailwindcss": "^4.2.1",
-    "three": "^0.183.1",
+    "tailwindcss": "^4.3.0",
+    "three": "^0.184.0",
     "umi-request": "^1.4.0",
-    "unocss": "^66.6.0"
+    "unocss": "^66.6.8"
   },
   "devDependencies": {
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
     "husky": "^9",
-    "lint-staged": "^16.2.7",
-    "prettier": "^3.8.1",
+    "lint-staged": "^17.0.4",
+    "prettier": "^3.8.3",
     "prettier-plugin-organize-imports": "^4.3.0",
-    "prettier-plugin-packagejson": "^3.0.0",
-    "typescript": "^5.9.3"
+    "prettier-plugin-packagejson": "^3.0.2",
+    "typescript": "^6.0.3"
   },
-  "packageManager": "pnpm@10.30.2"
+  "packageManager": "pnpm@11.0.9"
 }
